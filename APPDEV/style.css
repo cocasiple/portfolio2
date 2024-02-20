@@ -1,0 +1,203 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.6;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #fff;
+}
+
+main {
+    padding: 20px;
+}
+
+section {
+    margin-bottom: 30px;
+}
+
+h2 {
+    text-align: center;
+}
+
+article {
+    padding: 20px;
+    border: 1px solid #ccc;
+}
+
+footer {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+/* About me section */
+#about {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+#about-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#about-left img {
+    max-width: 60%;
+    width: 60%;
+    height: auto;
+}
+
+#about-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+
+/* Education section */
+#education {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+    grid-template-areas: 
+        "left right";
+}
+
+#ADDU {
+    grid-area: left;
+}
+
+#ADDUSHS {
+    grid-area: right;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+.skills-column {
+    display: inline-block;
+    vertical-align: top;
+    margin-right: 20px;
+}
+
+.skills-column ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: center;
+}
+
+.skills-column ul li {
+    margin-bottom: 10px;
+}
+
+/* Project section */
+#projects {
+    display: flex;
+    flex-direction: column;
+}
+
+.project {
+    display: flex;
+    margin-bottom: 20px;
+    background-color: #333;
+}
+
+.project-image {
+    flex: 0 0 60%;
+    margin-right: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.project-details {
+    flex: 0 0 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0 10%;
+    color: #fff;
+
+}
+
+/* Contact Me section */
+.contact-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.contact-item {
+    flex: 1;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+}
+
+@media only screen and (max-width: 600px) {
+    #about {
+        grid-template-columns: 1fr;
+    }
+
+    #about-left,
+    #about-right {
+        text-align: center;
+    }
+
+    #about-left img {
+        margin-bottom: 20px;
+        width: 50%;
+    }
+
+    .contact-grid {
+        flex-direction: column;
+    }
+
+    .contact-item {
+        margin-bottom: 20px;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project-image {
+        flex: 0 0 100%;
+        margin-bottom: 20px;
+    }
+
+    .project-details {
+        flex: 0 0 100%;
+    }
+}
